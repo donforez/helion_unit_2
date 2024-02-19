@@ -16,4 +16,8 @@ describe('Sprawdzanie poprawiacza zdań', () => {
     test('Poprawia zdanie "to jest zdanie   bez kropki!!!!"', () => {
         expect(correctSentence("to jest zdanie   bez kropki!!!!")).toBe("To jest zdanie bez kropki!!!!");
     })
+
+    test('Poprawia zdanie ""', () => {
+        expect(correctSentence("")).toBe("");
+    })
 })

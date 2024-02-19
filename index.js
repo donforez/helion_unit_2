@@ -1,5 +1,10 @@
 export const correctSentence = sentence => {
-    const trimmedSentence = sentence.trim().replace(/ +/g, " ")
+    let trimmedSentence
+    if (sentence == "") {
+         return sentence
+    } else {
+        trimmedSentence = sentence.trim().replace(/ +/g, " ")
+    }
     const disallowedList = ['!', '?', ',', ':', ';']
     const endsWithDisallowed = disallowedList.includes(trimmedSentence[trimmedSentence.length - 1])
 
